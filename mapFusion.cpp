@@ -3,8 +3,8 @@
 //
 
 //msg
-#include "lio_sam/cloud_info.h"
-#include "lio_sam/context_info.h"
+#include "lio_sam_multi_robots/cloud_info.h"
+#include "lio_sam_multi_robots/context_info.h"
 
 //third party
 #include "scanContext/scanContext.h"
@@ -46,6 +46,8 @@
 #include <unordered_map>
 #include <thread>
 #include <mutex>
+
+namespace lio_sam = lio_sam_multi_robots;
 
 inline gtsam::Pose3_ transformTo(const gtsam::Pose3_& x, const gtsam::Pose3_& p) {
     return gtsam::Pose3_(x, &gtsam::Pose3::transform_pose_to, p);
